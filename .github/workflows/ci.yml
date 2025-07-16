@@ -24,7 +24,8 @@ jobs:
         with:
           name: build-output
           path: dist
-       # тут мы собс-на просто смотрим, что сервер жив и радуемся
+          
+      # тут мы собс-на просто смотрим, что сервер жив и радуемся
       - name: agent - get server status
         uses: appleboy/ssh-action@master
         with:
