@@ -33,7 +33,8 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: neofetch && df -H / && free -m
-      - name Re-build for agent
+          
+      - name: Re-build for agent
         run:
           sed -i '35d' vite.config.ts
           npm pkg set homepage='${{ secrets.SERVER_DOMAIN }}'
